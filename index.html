@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulir Pendaftaran</h1>
+        <form id="registrationForm" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+      
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+      
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br>
+      
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const age = document.getElementById('age').value;
+
+            sessionStorage.setItem('name', name);
+            sessionStorage.setItem('email', email);
+            sessionStorage.setItem('age', age);
+
+            // Redirect ke halaman detail
+            window.location.href = 'detail.html';
+        });
+    </script>
+</body>
+</html>

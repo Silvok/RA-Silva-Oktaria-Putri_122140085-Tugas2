@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Pendaftaran</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Detail Informasi Pendaftar</h1>
+        <table class="info-table">
+            <tr>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>Usia</th>
+            </tr>
+            <tr>
+                <td>Silva Oktaria P</td>
+                <td>silvaptr@gmail.com</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td id="nama"></td>
+                <td id="email"></td>
+                <td id="usia"></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        document.getElementById('nama').innerText = sessionStorage.getItem('name');
+        document.getElementById('email').innerText = sessionStorage.getItem('email');
+        document.getElementById('usia').innerText = sessionStorage.getItem('age');
+    </script>
+</body>
+</html>
